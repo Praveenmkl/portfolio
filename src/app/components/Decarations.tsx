@@ -4,7 +4,7 @@ import { Code2, Star, MousePointerClick } from "lucide-react";
 
 export default function Decorations() {
   return (
-    <div className="absolute inset-0 pointer-events-none overflow-hidden">
+    <div style={{ position: "absolute", inset: "0", pointerEvents: "none", overflow: "hidden" }}>
       {/* </> Code Icon */}
       <motion.div
         initial={{ opacity: 0 }}
