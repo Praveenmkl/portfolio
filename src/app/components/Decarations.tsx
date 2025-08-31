@@ -1,5 +1,5 @@
 "use client";
-import { motion, HTMLMotionProps } from "framer-motion";
+import { motion } from "framer-motion";
 import { Code2, Star, MousePointerClick } from "lucide-react";
 
 const floatAnimation = {
@@ -15,8 +15,9 @@ export default function Decorations() {
         initial={{ opacity: 0 }}
         animate={{ 
           opacity: 1,
-          ...floatAnimation
+          y: floatAnimation.y,
         }}
+        transition={floatAnimation.transition}
         className="absolute top-20 left-16 text-[#f7941d]"
       >
         <Code2 size={48} className="drop-shadow-xl" />
@@ -27,9 +28,9 @@ export default function Decorations() {
         initial={{ opacity: 0 }}
         animate={{ 
           opacity: 1,
-          ...floatAnimation
+          y: floatAnimation.y,
         }}
-        transition={{ duration: 4, repeat: Infinity }}
+        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
         className="absolute bottom-28 right-20 text-yellow-400"
       >
         <Star size={40} className="drop-shadow-xl" />
@@ -40,9 +41,9 @@ export default function Decorations() {
         initial={{ opacity: 0 }}
         animate={{ 
           opacity: 1,
-          ...floatAnimation
+          y: floatAnimation.y,
         }}
-        transition={{ duration: 5, repeat: Infinity }}
+        transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
         className="absolute top-1/2 left-[70%] text-cyan-400"
       >
         <MousePointerClick size={44} className="drop-shadow-xl" />
