@@ -4,7 +4,7 @@ import { Code2, Star, MousePointerClick } from "lucide-react";
 
 const floatAnimation = {
   y: [0, -20, 0],
-  transition: { duration: 3, repeat: Infinity, ease: "easeInOut" },
+  transition: { duration: 3, repeat: Infinity, ease: "easeInOut" } as const,
 };
 
 export default function Decorations() {
@@ -15,9 +15,9 @@ export default function Decorations() {
         initial={{ opacity: 0 }}
         animate={{ 
           opacity: 1,
-          y: floatAnimation.y,
+          y: [0, -20, 0],
         }}
-        transition={floatAnimation.transition}
+        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
         className="absolute top-20 left-16 text-[#f7941d]"
       >
         <Code2 size={48} className="drop-shadow-xl" />
@@ -28,7 +28,7 @@ export default function Decorations() {
         initial={{ opacity: 0 }}
         animate={{ 
           opacity: 1,
-          y: floatAnimation.y,
+          y: [0, -20, 0],
         }}
         transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
         className="absolute bottom-28 right-20 text-yellow-400"
@@ -41,7 +41,7 @@ export default function Decorations() {
         initial={{ opacity: 0 }}
         animate={{ 
           opacity: 1,
-          y: floatAnimation.y,
+          y: [0, -20, 0],
         }}
         transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
         className="absolute top-1/2 left-[70%] text-cyan-400"
