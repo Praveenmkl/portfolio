@@ -2,11 +2,6 @@
 import { motion } from "framer-motion";
 import { Code2, Star, MousePointerClick } from "lucide-react";
 
-const floatAnimation = {
-  y: [0, -20, 0],
-  transition: { duration: 3, repeat: Infinity, ease: "easeInOut" } as const,
-};
-
 export default function Decorations() {
   return (
     <div className="absolute inset-0 pointer-events-none overflow-hidden">
@@ -18,9 +13,14 @@ export default function Decorations() {
           y: [0, -20, 0],
         }}
         transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-20 left-16 text-[#f7941d]"
+        style={{
+          position: "absolute",
+          top: "5rem",
+          left: "4rem",
+          color: "#f7941d"
+        }}
       >
-        <Code2 size={48} className="drop-shadow-xl" />
+        <Code2 size={48} style={{ filter: "drop-shadow(0 25px 25px rgb(0 0 0 / 0.15))" }} />
       </motion.div>
 
       {/* Star Icon */}
@@ -31,9 +31,14 @@ export default function Decorations() {
           y: [0, -20, 0],
         }}
         transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute bottom-28 right-20 text-yellow-400"
+        style={{
+          position: "absolute",
+          bottom: "7rem",
+          right: "5rem",
+          color: "#fbbf24"
+        }}
       >
-        <Star size={40} className="drop-shadow-xl" />
+        <Star size={40} style={{ filter: "drop-shadow(0 25px 25px rgb(0 0 0 / 0.15))" }} />
       </motion.div>
 
       {/* UI/UX Cursor */}
@@ -44,9 +49,14 @@ export default function Decorations() {
           y: [0, -20, 0],
         }}
         transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-1/2 left-[70%] text-cyan-400"
+        style={{
+          position: "absolute",
+          top: "50%",
+          left: "70%",
+          color: "#22d3ee"
+        }}
       >
-        <MousePointerClick size={44} className="drop-shadow-xl" />
+        <MousePointerClick size={44} style={{ filter: "drop-shadow(0 25px 25px rgb(0 0 0 / 0.15))" }} />
       </motion.div>
     </div>
   );
