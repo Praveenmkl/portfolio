@@ -1,6 +1,5 @@
 "use client";
 import { useEffect, useState } from "react";
-import Image from "next/image";
 
 const greetings = ["අයුබෝවන්", "Welcome", "Chao", "Hola", "Bonjour", "Namaste"];
 
@@ -24,28 +23,21 @@ const SplashScreen = ({ onFinish }) => {
   }, [index, onFinish]);
 
   return (
-    <div className="fixed inset-0 bg-[#000814] flex flex-col items-center justify-center z-50">
-      
-      {/* Greeting */}
+    <div className="fixed inset-0 bg-[#0d1b1e] flex flex-col items-center justify-center z-50">
+      {/* Greeting with small corner circle */}
       {index < greetings.length && (
-        <h3 className="text-[#f7941d]  md:text-6xl font-medium mb-6">
-          {greetings[index]}
-        </h3>
-      )}
+        <div className="relative inline-block">
+          {/* Circle */}
+          <span className="absolute -top-3 -left-3 w-4 h-4 bg-[#ffb703] rounded-full"></span>
 
-      {/* Image below greeting */}
-      <div>
-        <Image
-          src="/portfolio welcome.png"  // ✅ image path relative to /public
-          alt="Splash Image"
-          width={320}                   // set width
-          height={320}                  // set height
-          className="object-contain"    // removes rounded/border
-        />
-      </div>
+          {/* Text */}
+          <h3 className="text-[#ffb703] md:text-6xl font-medium mb-6">
+            {greetings[index]}
+          </h3>
+        </div>
+      )}
     </div>
   );
 };
 
 export default SplashScreen;
-

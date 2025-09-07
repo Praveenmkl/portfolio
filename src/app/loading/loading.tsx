@@ -9,13 +9,13 @@ const LoadingScreen = () => {
           animate={{ scale: 1, opacity: 1 }}
           transition={{ duration: 0.5 }}
         >
-          <div className="w-20 h-20 border-4 border-[#f7941d] border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
+          <div className="w-20 h-20 border-4 border-[#00ffcc] border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
         </motion.div>
         <motion.h2
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.5 }}
-          className="text-[#f7941d] text-xl font-semibold"
+          className="text-[#00ffcc] text-xl font-semibold"
         >
           Loading...
         </motion.h2>

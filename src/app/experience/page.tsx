@@ -30,7 +30,7 @@ const Experience = () => {
           My Journey
         </p>
         <h2 className="text-3xl sm:text-2xl font-semibold">
-          <span className="text-[#f7941d]">Experience</span>
+          <span className="text-[#ffb703]">Experience</span>
         </h2>
       </div>
 
@@ -39,10 +39,10 @@ const Experience = () => {
         {experiences.map((exp, index) => (
           <div
             key={index}
-            className="p-6 rounded-2xl bg-white/5 backdrop-blur-md shadow-lg hover:shadow-[0_0_5px_#f7941d] hover:scale-[1.02] transition-all duration-300"
+            className="p-6 rounded-2xl bg-white/5 backdrop-blur-md shadow-lg hover:shadow-[0_0_5px_#00ffcc] hover:scale-[1.02] transition-all duration-300"
           >
             <div className="flex items-center gap-3 mb-2">
-              <Briefcase className="text-[#f7941d]" size={24} />
+              <Briefcase className="text-[#00ffcc]" size={24} />
               <h3 className="text-lg font-semibold">{exp.role}</h3>
             </div>
             <p className="text-gray-300 text-sm">{exp.company}</p>

@@ -1,13 +1,71 @@
-import React from 'react'
+"use client";
+import React from "react";
+import { Mail, Phone, MapPin } from "lucide-react";
 
-const page = () => {
+const ContactMe = () => {
   return (
-    <div>page</div>
-  )
-}
+    <section className="relative z-10 mt-20 px-4 sm:px-8 w-full">
+      {/* Section Title */}
+      <div className="text-center mb-12 max-w-7xl mx-auto">
+        <p className="text-sm text-gray-400 tracking-wide font-semibold">Get In Touch</p>
+        <h2 className="text-3xl sm:text-2xl font-semibold">
+          <span className="text-[#ffb703]">Contact Me</span>
+        </h2>
+        <p className="mt-4 text-gray-300 max-w-2xl mx-auto text-base leading-relaxed">
+          Feel free to reach out for collaborations, freelance projects, or just to say hello.
+        </p>
+      </div>
 
-export default page
+      {/* Two-column layout */}
+      <div className="flex flex-col lg:flex-row justify-center items-start gap-12 max-w-7xl mx-auto">
+        {/* Left: Contact Cards */}
+        <div className="flex flex-col gap-6 justify-start items-center lg:items-start">
+          {[
+            { icon: <Mail size={30} />, title: "Email", info: "kalansooriya615@gmail.com" },
+            { icon: <Phone size={30} />, title: "Phone", info: "+94 74 292 6978" },
+            { icon: <MapPin size={30} />, title: "Location", info: "Galle, Sri Lanka" },
+          ].map((card, idx) => (
+            <div
+              key={idx}
+              className="p-6 w-64 rounded-2xl bg-white/5 backdrop-blur-md shadow-lg hover:shadow-[0_0_8px_#00ffcc] hover:scale-105 transition-all duration-300 flex flex-col items-center text-center"
+            >
+              {/* Icon centered */}
+              <div className="mb-3 text-[#00ffcc]">{card.icon}</div>
+              <h3 className="text-sm text-gray-400">{card.title}</h3>
+              <p className="text-gray-200 mt-1">{card.info}</p>
+            </div>
+          ))}
+        </div>
 
+        {/* Right: Contact Form */}
+        <div className="flex-1 max-w-md bg-white/5 backdrop-blur-md rounded-2xl shadow-lg p-6 sm:p-10">
+          <form className="flex flex-col gap-4">
+            <input
+              type="text"
+              placeholder="Your Name"
+              className="p-3 rounded-lg bg-white/10 text-gray-200 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#00ffcc]"
+            />
+            <input
+              type="email"
+              placeholder="Your Email"
+              className="p-3 rounded-lg bg-white/10 text-gray-200 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#00ffcc]"
+            />
+            <textarea
+              rows={5}
+              placeholder="Your Message"
+              className="p-3 rounded-lg bg-white/10 text-gray-200 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-[#00ffcc]"
+            ></textarea>
+            <button
+              type="submit"
+              className="mt-2 px-6 py-3 w-max rounded-full bg-[#00ffcc] text-black font-semibold hover:bg-[#ffb703] transition shadow-lg"
+            >
+              Send
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  );
+};
 
-
-
+export default ContactMe;

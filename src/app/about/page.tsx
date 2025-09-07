@@ -5,23 +5,23 @@ const AboutMePage = () => {
   return (
     <div>
       {/* About Me Section */}
-      <section className="relative z-10 mt-20 px-4 sm:px-8 max-w-4xl mx-auto">
+      <section className="relative z-10 -mt-20 px-4 sm:px-8 max-w-7xl mx-auto  ">
         
         {/* Section Title */}
         <div className="text-center mb-10">
           <p className="text-sm text-gray-400 tracking-wide font-semibold">Get To Know</p>
           <h2 className="text-3xl sm:text-2xl font-semibold">
-            <span className="text-[#f7941d]">About Me</span>
+            <span className="text-[#ffb703]">About Me</span>
           </h2>
         </div>
 
         {/* Info Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-10">
+        <div className="w-4xl grid grid-cols-1 sm:grid-cols-3 gap-6 mb-10 ">
           
           {/* Experience */}
           <div className="p-6 rounded-2xl bg-white/5 backdrop-blur-md shadow-lg text-center 
-                          hover:shadow-[0_0_5px_#f7941d] hover:scale-105 transition-all duration-300">
-            <Award size={30} className="mx-auto mb-3 text-[#f7941d]" />
+                          hover:shadow-[0_0_5px_#00ffcc] hover:scale-105 transition-all duration-300">
+            <Award size={30} className="mx-auto mb-3 text-[#00ffcc]" />
             <h3 className="text-sm text-gray-400">Experience</h3>
             <p className="text-1xl">2+ Years</p>
             <p className="text-1xl">Working</p>
@@ -29,16 +29,16 @@ const AboutMePage = () => {
 
           {/* Clients */}
           <div className="p-6 rounded-2xl bg-white/5 backdrop-blur-md shadow-lg text-center 
-                          hover:shadow-[0_0_5px_#f7941d] hover:scale-105 transition-all duration-300">
-            <Globe size={30} className="mx-auto mb-3 text-[#f7941d]" />
+                          hover:shadow-[0_0_5px_#00ffcc] hover:scale-105 transition-all duration-300">
+            <Globe size={30} className="mx-auto mb-3 text-[#00ffcc]" />
             <h3 className="text-sm text-gray-400">Clients</h3>
             <p className="text-1xl">Worldwide</p>
           </div>
 
           {/* Projects */}
           <div className="p-6 rounded-2xl bg-white/5 backdrop-blur-md shadow-lg text-center 
-                          hover:shadow-[0_0_5px_#f7941d] hover:scale-105 transition-all duration-300">
-            <FolderKanban size={30} className="mx-auto mb-3 text-[#f7941d]" />
+                          hover:shadow-[0_0_5px_#00ffcc] hover:scale-105 transition-all duration-300">
+            <FolderKanban size={30} className="mx-auto mb-3 text-[#00ffcc]" />
             <h3 className="text-sm text-gray-400">Projects</h3>
             <p className="text-1xl">10+</p>
             <p className="text-1xl">Completed</p>
@@ -56,7 +56,7 @@ const AboutMePage = () => {
         <div className="flex justify-center">
           <a 
             href="/contact" 
-            className="px-6 py-3 rounded-full bg-[#f7941d] text-black font-semibold hover:bg-[#ffa94d] transition shadow-lg"
+            className="px-6 py-3 rounded-full bg-[#00ffcc] text-black font-semibold hover:bg-[#ffb703] transition shadow-lg"
           >
             Let's Talk
           </a>

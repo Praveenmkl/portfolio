@@ -1,0 +1,5 @@
+.splineWrapper {
+  position: absolute; /* allows you to move it anywhere */
+  z-index: 5;  
+      /* sits above background but below UI if needed */
+}
