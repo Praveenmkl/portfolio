@@ -4,7 +4,7 @@ import { Code, Palette, PenTool } from "lucide-react";
 const Skills = () => {
   return (
     <div id='skills'>
-      <section className="relative z-10 mt-12 px-4 sm:px-8 max-w-5xl mx-auto ">
+      <section className="relative z-10  px-4 sm:px-8 max-w-5xl mx-auto mt-25">
 
         {/* Section Title */}
         <div className="text-center mb-6 sm:mb-10">

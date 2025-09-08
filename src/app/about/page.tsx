@@ -5,7 +5,7 @@ const AboutMePage = () => {
   return (
     <div id='about'>
       {/* About Me Section */}
-      <section className="relative z-10 -mt-20 px-4 sm:px-8 mx-auto  max-w-[350px] sm:max-w-full">
+      <section className="relative z-10 -mt-80 sm:-mt-40 px-4 sm:px-8 mx-auto max-w-[260px] sm:max-w-full">
 
         {/* Section Title */}
         <div className="text-center mb-8 sm:mb-10">

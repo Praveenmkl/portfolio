@@ -29,7 +29,7 @@ const Experience = () => {
         <p className="text-sm text-gray-400 tracking-wide font-semibold">
           My Journey
         </p>
-        <h2 className="text-3xl sm:text-2xl font-semibold">
+        <h2 className="text-2xl sm:text-3xl font-semibold">
           <span className="text-[#ffb703]">Experience</span>
         </h2>
       </div>
