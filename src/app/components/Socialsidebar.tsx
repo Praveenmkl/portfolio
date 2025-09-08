@@ -1,12 +1,9 @@
 "use client";
-import { FaLinkedin, FaGithub, } from "react-icons/fa";
-import medium from "next/image"
+import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 export default function SocialSidebar() {
     return (
-
-
-        <div className="absolute left-50 top-30 flex flex-col items-center space-y-6 text-[#ffb703] z-50">
+        <div className="hidden md:flex absolute left-50 top-30 flex-col items-center space-y-6 text-[#ffb703] z-50">
             {/* LinkedIn */}
             <a
                 href="https://www.linkedin.com/in/praveen-kalansooriya-219198303/?originalSubdomain=lk"
@@ -35,7 +32,7 @@ export default function SocialSidebar() {
                 className="hover:opacity-80 transition duration-300"
             >
                 <img
-                    src="/medium.png" 
+                    src="/medium.png"
                     alt="Medium"
                     className="w-8 h-4.5"
                 />
