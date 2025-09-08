@@ -1,3 +1,4 @@
+{/*
 import { motion } from "framer-motion";
 
 const LoadingScreen = () => {
@@ -24,4 +25,4 @@ const LoadingScreen = () => {
   );
 };
 
-export default LoadingScreen;
+export default LoadingScreen;*/}
