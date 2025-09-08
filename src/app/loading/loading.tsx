@@ -1,4 +1,4 @@
-import { motion, HTMLMotionProps } from "framer-motion";
+import { motion } from "framer-motion";
 
 const LoadingScreen = () => {
   return (
@@ -11,22 +11,21 @@ const LoadingScreen = () => {
         >
           <div className="w-20 h-20 border-4 border-[#00ffcc] border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
         </motion.div>
-        <motion.h2
+        <motion.div
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.5 }}
-          style={{ color: '#00ffcc' }}
-          className="text-xl font-semibold"
         >
-          Loading...
-        </motion.h2>
+          <h2 className="text-[#00ffcc] text-xl font-semibold">
+            Loading...
+          </h2>
+        </motion.div>
       </div>
     </div>
   );
 };
 
 export default LoadingScreen;
-
 
 
 {/*
