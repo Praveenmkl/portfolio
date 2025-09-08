@@ -39,6 +39,7 @@ const Projects = () => {
   };
 
   return (
+    <div id="projects">
     <section className="relative z-10 mt-20 px-4 sm:px-8 max-w-7xl mx-auto">
       {/* Section Title */}
       <div className="text-center mb-12">
@@ -132,6 +133,7 @@ const Projects = () => {
         </button>
       </div>
     </section>
+    </div>
   );
 };
 

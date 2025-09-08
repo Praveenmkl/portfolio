@@ -3,6 +3,7 @@ import { Code, Palette, PenTool } from "lucide-react";
 
 const Skills = () => {
   return (
+     <div id='skills'>
     <section className="relative z-10 mt-20 px-4 sm:px-8 max-w-7xl mx-auto">
 
       {/* Section Title */}
@@ -15,7 +16,7 @@ const Skills = () => {
       </div>
 
       {/* Skills Cards */}
-      <div className="w-4xl grid grid-cols-1 sm:grid-cols-3 gap-6 mb-10">
+      <div className="w-4xl grid grid-cols-1 sm:grid-cols-3 gap-6 mb-10 ">
 
         {/* UI/UX Design */}
         <div className="p-6 rounded-2xl bg-white/5 backdrop-blur-md shadow-lg text-center 
@@ -70,6 +71,8 @@ const Skills = () => {
         </p>
       </div>
     </section>
+
+    </div>
   );
 };
 

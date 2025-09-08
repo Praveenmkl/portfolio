@@ -3,7 +3,7 @@ import { Award, Globe, FolderKanban } from "lucide-react";
 
 const AboutMePage = () => {
   return (
-    <div>
+    <div id='about'>
       {/* About Me Section */}
       <section className="relative z-10 -mt-20 px-4 sm:px-8 max-w-7xl mx-auto  ">
         

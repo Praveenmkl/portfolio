@@ -4,6 +4,7 @@ import { Mail, Phone, MapPin } from "lucide-react";
 
 const ContactMe = () => {
   return (
+    <div id="contact">
     <section className="relative z-10 mt-20 px-4 sm:px-8 w-full">
       {/* Section Title */}
       <div className="text-center mb-12 max-w-7xl mx-auto">
@@ -65,6 +66,7 @@ const ContactMe = () => {
         </div>
       </div>
     </section>
+    </div>
   );
 };
 
