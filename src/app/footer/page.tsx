@@ -38,7 +38,7 @@ const Footer: React.FC = () => {
               className="w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center bg-black text-white
                          shadow-md hover:shadow-lg transform hover:scale-110 transition-all duration-300 ease-out"
             >
-              <Icon size={18} sm={20} />
+              <Icon className="w-[18px] h-[18px] sm:w-[20px] sm:h-[20px]" />
             </a>
           ))}
         </div>
