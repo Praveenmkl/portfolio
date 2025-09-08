@@ -1,18 +1,5 @@
 "use client";
-import { useEffect , useRef} from "react";
-
-
-// // Add custom element type for TypeScript
-// declare global {
-//   namespace JSX {
-//     interface IntrinsicElements {
-//       "spline-viewer": React.DetailedHTMLProps<React.HTMLAttributes<HTMLElement>, HTMLElement> & {
-//         url: string;
-//         class?: string;
-//       };
-//     }
-//   }
-// }
+import { useEffect, useRef } from "react";
 
 interface SplineSceneProps {
   url: string;
@@ -26,7 +13,6 @@ export default function SplineScene({
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Load the Spline viewer script
     if (!document.querySelector('script[src*="spline-viewer.js"]')) {
       const script = document.createElement("script");
       script.type = "module";
@@ -35,25 +21,24 @@ export default function SplineScene({
       document.body.appendChild(script);
     }
 
-    // Create and append the spline-viewer element
     if (containerRef.current) {
-      // Clear previous content
-      containerRef.current.innerHTML = '';
-      
-      // Create the element programmatically
-      const splineViewer = document.createElement('spline-viewer');
-      splineViewer.setAttribute('url', url);
-      splineViewer.setAttribute('class', className);
-      
-      // Append to container
+      containerRef.current.innerHTML = "";
+      const splineViewer = document.createElement("spline-viewer");
+      splineViewer.setAttribute("url", url);
+      splineViewer.setAttribute("class", className);
       containerRef.current.appendChild(splineViewer);
     }
   }, [url, className]);
 
   return (
-    <div className="relative w-full h-180" style={{ top: "-150px" }}>
+    <div
+      className="
+        relative w-full 
+        h-[600px] sm:h-[700px] md:h-[750px] lg:h-[800px] 
+        -top-10 sm:-top-20 md:-top-28 lg:-top-36
+      "
+    >
       <div ref={containerRef}></div>
     </div>
   );
 }
-

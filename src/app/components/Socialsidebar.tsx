@@ -1,5 +1,5 @@
 "use client";
-// import { FaLinkedin, FaGithub } from "react-icons/fa";
+
 
 export default function SocialSidebar() {
     return (
@@ -11,7 +11,11 @@ export default function SocialSidebar() {
                 rel="noopener noreferrer"
                 className="hover:text-[#ffb703] transition-colors duration-300"
             >
-                {/* <FaLinkedin size={28} /> */}
+                 <img
+                    src="/linkedin.png"
+                    alt="linkedin"
+                    className="w-6 h-6"
+                />
             </a>
 
             {/* GitHub */}
@@ -21,7 +25,11 @@ export default function SocialSidebar() {
                 rel="noopener noreferrer"
                 className="hover:text-[#ffb703] transition-colors duration-300"
             >
-                {/* <FaGithub size={28} /> */}
+                <img
+                    src="/github.png"
+                    alt="github"
+                    className="w-11 h-6"
+                />
             </a>
 
             {/* Medium */}
@@ -34,7 +42,7 @@ export default function SocialSidebar() {
                 <img
                     src="/medium.png"
                     alt="Medium"
-                    className="w-8 h-4.5"
+                    className="w-7 h-3.5"
                 />
             </a>
 
