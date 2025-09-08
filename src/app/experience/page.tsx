@@ -38,28 +38,29 @@ const Experience = () => {
       <div className="space-y-8">
         {experiences.map((exp, index) => (
           <div
-            key={index}
-            className="p-6 rounded-2xl bg-white/5 backdrop-blur-md shadow-lg hover:shadow-[0_0_5px_#00ffcc] hover:scale-[1.02] transition-all duration-300"
-          >
-            <div className="flex items-center gap-3 mb-2">
-              <Briefcase className="text-[#00ffcc]" size={24} />
-              <h3 className="text-lg font-semibold">{exp.role}</h3>
-            </div>
-            <p className="text-gray-300 text-sm">{exp.company}</p>
+  key={index}
+  className="w-[260px] mx-auto sm:w-full p-6 rounded-2xl bg-white/5 backdrop-blur-md shadow-lg 
+             hover:shadow-[0_0_5px_#00ffcc] hover:scale-[1.02] transition-all duration-300"
+>
+  <div className="flex items-center gap-3 mb-2">
+    <Briefcase className="text-[#00ffcc]" size={24} />
+    <h3 className="text-lg font-semibold">{exp.role}</h3>
+  </div>
+  <p className="text-gray-300 text-sm">{exp.company}</p>
 
-            <div className="flex items-center text-gray-400 text-xs mt-1 gap-4">
-              <div className="flex items-center gap-1">
-                <Calendar size={14} /> {exp.duration}
-              </div>
-              <div className="flex items-center gap-1">
-                <MapPin size={14} /> {exp.location}
-              </div>
-            </div>
+  <div className="flex items-center text-gray-400 text-xs mt-1 gap-4">
+    <div className="flex items-center gap-1">
+      <Calendar size={14} /> {exp.duration}
+    </div>
+    <div className="flex items-center gap-1">
+      <MapPin size={14} /> {exp.location}
+    </div>
+  </div>
 
-            <p className="text-gray-200 mt-3 text-sm leading-relaxed">
-              {exp.description}
-            </p>
-          </div>
+  <p className="text-gray-200 mt-3 text-sm leading-relaxed">
+    {exp.description}
+  </p>
+</div>
         ))}
       </div>
     </section>

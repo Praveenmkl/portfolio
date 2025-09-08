@@ -1,4 +1,3 @@
-
 "use client";
 import React, { useRef } from "react";
 import { ExternalLink, Globe, ChevronLeft, ChevronRight } from "lucide-react";
@@ -47,7 +46,7 @@ const Projects = () => {
           <h2 className="text-2xl sm:text-3xl font-semibold">
             <span className="text-[#ffb703]">Projects</span>
           </h2>
-          <p className="mt-2 sm:mt-4 text-gray-300 max-w-2xl mx-auto text-sm sm:text-base leading-relaxed">
+          <p className="text-sm  mt-1 sm:mt-4 text-gray-300 max-w-[60%] sm:max-w-2xl mx-auto text-[14px] sm:text-base leading-snug sm:leading-relaxed">
             A showcase of my UI/UX, frontend, and full-stack projects. Designed for clarity, usability, and modern aesthetics.
           </p>
         </div>
@@ -59,27 +58,27 @@ const Projects = () => {
             onClick={() => scroll("left")}
             className="absolute left-0 top-1/2 -translate-y-1/2 z-10 p-2 sm:p-3 rounded-full bg-white/10 hover:bg-[#ffb703]/20 text-[#ffb703] transition"
           >
-            <ChevronLeft size={20}  />
+            <ChevronLeft size={20} />
           </button>
 
           {/* Carousel Container */}
           <div
             ref={carouselRef}
-            className="flex overflow-x-auto scrollbar-none gap-4 sm:gap-6 py-4 px-2 scroll-smooth"
+            className="flex overflow-x-auto scrollbar-none gap-2 sm:gap-6 py-3 sm:py-4 px-2 sm:px-2 scroll-smooth"
           >
             {projects.map((project, index) => (
               <div
                 key={index}
-                className={`min-w-[200px] sm:min-w-[300px] lg:min-w-[300px] p-4 sm:p-5 rounded-2xl bg-white/5 backdrop-blur-md shadow-lg hover:shadow-[0_0_10px_#00ffcc] hover:scale-105 transition-all duration-300 flex flex-col items-center justify-between ${
+                className={`min-w-[180px] sm:min-w-[300px] lg:min-w-[300px] p-3 sm:p-5 rounded-2xl bg-white/5 backdrop-blur-md shadow-lg hover:shadow-[0_0_10px_#00ffcc] hover:scale-105 transition-all duration-300 flex flex-col items-center justify-between ${
                   !project.title
-                    ? "bg-white/2 border-dashed border-2 border-gray-500/40 text-gray-400 text-center p-8"
+                    ? "bg-white/2 border-dashed border-2 border-gray-500/40 text-gray-400 text-center p-6"
                     : ""
                 }`}
               >
                 {project.title ? (
                   <>
                     {/* Image */}
-                    <div className="relative w-full h-40 sm:h-48 rounded-xl overflow-hidden mb-3 sm:mb-4">
+                    <div className="relative w-full h-32 sm:h-48 rounded-xl overflow-hidden mb-2 sm:mb-4">
                       <Image
                         src={project.image}
                         alt={project.title}
@@ -89,22 +88,24 @@ const Projects = () => {
                     </div>
 
                     {/* Project Info */}
-                    <h3 className="text-base sm:text-lg font-semibold text-gray-200 text-center">{project.title}</h3>
-                    <p className="text-xs sm:text-sm text-[#00ffcc] mt-1 text-center">{project.tech}</p>
-                    <p className="text-gray-300 mt-2 text-xs sm:text-sm leading-relaxed text-center flex-1">
+                    <h3 className="text-sm sm:text-lg font-semibold text-gray-200 text-center">
+                      {project.title}
+                    </h3>
+                    <p className="text-[10px] sm:text-sm text-[#00ffcc] mt-1 text-center">{project.tech}</p>
+                    <p className="text-gray-300 mt-1 sm:mt-2 text-[10px] sm:text-sm leading-snug sm:leading-relaxed text-center flex-1">
                       {project.description}
                     </p>
 
                     {/* Links */}
-                    <div className="flex gap-2 sm:gap-3 mt-3 flex-wrap justify-center">
+                    <div className="flex gap-1 sm:gap-3 mt-2 sm:mt-3 flex-wrap justify-center">
                       {project.link && (
                         <a
                           href={project.link}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1 text-[#00ffcc] text-xs sm:text-sm hover:underline"
+                          className="inline-flex items-center gap-1 text-[#00ffcc] text-[10px] sm:text-sm hover:underline"
                         >
-                          View Code <ExternalLink size={12}  />
+                          View Code <ExternalLink size={12} />
                         </a>
                       )}
                       {project.live && (
@@ -112,7 +113,7 @@ const Projects = () => {
                           href={project.live}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="inline-flex items-center gap-1 text-[#00ffcc] text-xs sm:text-sm hover:underline"
+                          className="inline-flex items-center gap-1 text-[#00ffcc] text-[10px] sm:text-sm hover:underline"
                         >
                           Live Demo <Globe size={12} />
                         </a>
@@ -120,7 +121,9 @@ const Projects = () => {
                     </div>
                   </>
                 ) : (
-                  <p className="text-center font-medium text-gray-400 text-sm sm:text-base">More Coming Soon</p>
+                  <p className="text-center font-medium text-gray-400 text-[10px] sm:text-base">
+                    More Coming Soon
+                  </p>
                 )}
               </div>
             ))}
