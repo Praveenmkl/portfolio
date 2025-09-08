@@ -76,7 +76,7 @@ export default function Home() {
         {/* Profile Image */}
         <div className="flex justify-center pb-6">
           <Image
-            src="/profile_img.png"
+            src="/praveen_profile.jpg"
             alt="Praveen Profile"
             width={300}
             height={300}
