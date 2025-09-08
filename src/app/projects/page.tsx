@@ -1,3 +1,4 @@
+
 "use client";
 import React, { useRef } from "react";
 import { ExternalLink, Globe, ChevronLeft, ChevronRight } from "lucide-react";
@@ -58,7 +59,7 @@ const Projects = () => {
             onClick={() => scroll("left")}
             className="absolute left-0 top-1/2 -translate-y-1/2 z-10 p-2 sm:p-3 rounded-full bg-white/10 hover:bg-[#ffb703]/20 text-[#ffb703] transition"
           >
-            <ChevronLeft size={20} sm={24} />
+            <ChevronLeft size={20}  />
           </button>
 
           {/* Carousel Container */}
@@ -103,7 +104,7 @@ const Projects = () => {
                           rel="noopener noreferrer"
                           className="inline-flex items-center gap-1 text-[#00ffcc] text-xs sm:text-sm hover:underline"
                         >
-                          View Code <ExternalLink size={12} sm={14} />
+                          View Code <ExternalLink size={12}  />
                         </a>
                       )}
                       {project.live && (
@@ -113,7 +114,7 @@ const Projects = () => {
                           rel="noopener noreferrer"
                           className="inline-flex items-center gap-1 text-[#00ffcc] text-xs sm:text-sm hover:underline"
                         >
-                          Live Demo <Globe size={12} sm={14} />
+                          Live Demo <Globe size={12} />
                         </a>
                       )}
                     </div>
@@ -130,7 +131,7 @@ const Projects = () => {
             onClick={() => scroll("right")}
             className="absolute right-0 top-1/2 -translate-y-1/2 z-10 p-2 sm:p-3 rounded-full bg-white/10 hover:bg-[#ffb703]/20 text-[#ffb703] transition"
           >
-            <ChevronRight size={20} sm={24} />
+            <ChevronRight size={20} />
           </button>
         </div>
       </section>
